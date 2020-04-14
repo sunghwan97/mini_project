@@ -68,3 +68,15 @@ int deleteProduct(Product *p){
     
     return 1;
 }
+
+void saveData(Product *p, int count){
+
+}
+
+int loadData(Product p[]){
+
+}
+
+void searchName(Product *p, int count){
+
+}
