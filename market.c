@@ -1,5 +1,6 @@
 //2020OSS mini_project
 //CRUD product program
+//Made by SungHwan Park
 #include "manager.h"
 #define DEBUG
 
