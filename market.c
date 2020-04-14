@@ -58,6 +58,9 @@ int main(void){
                 saveData(mp, curcount);
             }
         }
+        else if(menu == 6){
+            searchName(mp, count);
+        }
     }
     printf("종료됨!\n");
     return 0;
