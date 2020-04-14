@@ -9,9 +9,9 @@ int selectMenu();
 
 int main(void){
 #ifdef DEBUG
-    printf("debug[market.c]");
+    printf("debug[market.c]\n");
 #endif
-    Product *mp[100];
+    Product mp[100];
     int count = 0, menu, curcount = 0;
     
     count = loadData(mp);
@@ -28,8 +28,7 @@ int main(void){
             } 
         }
         else if (menu == 2){
-	    mp[curcount] = (Product *)malloc(sizeof(Product));
-            count += addProduct(mp[curcount++]);
+            count += addProduct(&mp[curcount++]);
             printf("=> 추가됨! \n");
         }
         else if (menu == 3){
@@ -38,7 +37,7 @@ int main(void){
             	printf("=> 취소됨! \n");
 		continue;
 	    }
-            updateProduct(mp[no-1]);
+            updateProduct(&mp[no-1]);
         }
         else if (menu == 4){
 	    int no = selectDataNo(mp, curcount);
@@ -50,9 +49,7 @@ int main(void){
             printf("정말로 삭제하시겠습니까?(삭제: 1)");
             scanf("%d", &deleteok);
             if(deleteok == 1){
-                if(mp[no-1]) free(mp[no-1]);
-		mp[no-1] = NULL;
-		count--;
+                if(deleteProduct(&mp[no-1])) count--;
             }
         }
         else if(menu == 5){

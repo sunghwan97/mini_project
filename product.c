@@ -21,6 +21,7 @@ int addProduct(Product *p){
             printf("별점수를 다시 입력하세요. \n");
         else
             break;
+    }
  Worl://github.com/sunghwan97/mini_project.git   }
     
     return 1;
