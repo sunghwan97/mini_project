@@ -1,4 +1,5 @@
 //2020OSS mini_project
+//CRUD product program
 #include "manager.h"
 #define DEBUG
 
