@@ -1,3 +1,4 @@
+//2020OSS mini_project
 #include "manager.h"
 #define DEBUG
 
