@@ -9,6 +9,9 @@ int main(void){
 #endif
     Product *mp[100];
     int count = 0, menu, curcount = 0;
+    
+    count = loadData(mp);
+    curcount = count;
  
     while (1){
         menu = selectMenu();
