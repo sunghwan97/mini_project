@@ -1,3 +1,4 @@
+//CRUD function
 #include "product.h" 
 
 int addProduct(Product *p){
