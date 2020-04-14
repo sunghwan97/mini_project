@@ -110,5 +110,24 @@ int loadData(Product p[]){
 }
 
 void searchName(Product *p, int count){
+    int scount = 0;
+    char search[50];
 
+    printf("검색할 이름? ");
+    scanf("%[^\n]", search);
+
+    printf("번호 중량 가격 표준가격 별점수 제품명\n");
+    printf("========================================\n");
+
+    for(int i = 0; i < count; i++){
+        if(p[i].price != -1){
+            if(strstr(p[i].name, search)){
+                printf("%2d", i+1);
+                readProduct(p[i]);
+                scount++;
+            }
+        }
+    }
+    if(scount == 0) printf("=> 검색된 데이터 없음!");
+    printf("\n");
 }
