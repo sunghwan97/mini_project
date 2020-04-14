@@ -51,6 +51,13 @@ int main(void){
 		count--;
             }
         }
+        else if(menu == 5){
+            if(count == 0){
+                printf("데이터가 없습니다!\n");
+            } else{
+                saveData(mp, curcount);
+            }
+        }
     }
     printf("종료됨!\n");
     return 0;
