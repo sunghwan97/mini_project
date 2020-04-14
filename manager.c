@@ -1,3 +1,4 @@
+//For multiData function
 #include "manager.h"
 
 void listProduct(Product *p[], int count){
