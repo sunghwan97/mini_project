@@ -20,7 +20,7 @@ int addProduct(Product *p){
             printf("별점수를 다시 입력하세요. \n");
         else
             break;
-    }
+ Worl://github.com/sunghwan97/mini_project.git   }
     
     return 1;
 }
@@ -70,7 +70,17 @@ int deleteProduct(Product *p){
 }
 
 void saveData(Product *p, int count){
+    FILE *fp;
+    
+    fp = fopen("product.txt", "wt");
+    
+    for(int i = 0; i < count; i++){
+        if(p[i].price != -1)
+            fprintf(fp, "%d %d %d %d %s\n", p[i].price, p[i].weight, p[i].st_price, p[i].grade, p[i].name);
+    }
+    fclose(fp);
 
+    printf("저장됨!");
 }
 
 int loadData(Product p[]){
